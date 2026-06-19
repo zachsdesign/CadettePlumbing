@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadette Plumbing | Plumbing Maintenance Specialists</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+:root{
+    --black:#0f0f0f;
+    --charcoal:#1b1b1b;
+    --dark-grey:#2a2a2a;
+    --light-grey:#d9d9d9;
+    --white:#ffffff;
+    --border:rgba(255,255,255,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--black);
+    color:var(--white);
+    overflow-x:hidden;
+}
+
+.container{
+    width:min(92%,1200px);
+    margin:auto;
+}
+
+/* ---------------- HERO ---------------- */
+
+.hero{
+    min-height:75vh;    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 20px;
+    background:
+    radial-gradient(circle at top,#2a2a2a 0%,#151515 40%,#0f0f0f 100%);
+}
+
+.logo{
+    width:220px;
+    max-width:90%;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:clamp(2.2rem,6vw,5rem);
+    line-height:1.1;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#bfbfbf;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
+    font-size:1.1rem;
+}
+
+.phone{
+    display:inline-block;
+    background:white;
+    color:black;
+    padding:16px 32px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:700;
+    font-size:1.1rem;
+    transition:.3s;
+}
+
+.phone:hover{
+    transform:translateY(-3px);
+}
+
+/* ---------------- GALLERY ---------------- */
+
+.gallery-section{
+    padding:60px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:30px;
+}
+.gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    aspect-ratio:9 / 16;
+    object-fit:cover;
+    border-radius:24px;
+    border:1px solid var(--border);
+    transition:.4s;
+}
+
+.gallery img:hover{
+    transform:translateY(-8px);
+}
+
+/* ---------------- SERVICES ---------------- */
+
+.services{
+    padding:60px 0;
+}
+
+.category{
+    margin-bottom:35px;
+}
+
+.category-header{
+    width:100%;
+    cursor:pointer;
+    padding:22px 25px;
+    background:var(--charcoal);
+    border:none;
+    color:white;
+    font-size:1.1rem;
+    font-weight:600;
+    text-align:left;
+    border-radius:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.category-header i{
+    transition:.3s;
+}
+
+.category.active .category-header i{
+    transform:rotate(180deg);
+}
+
+.category-content{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+}
+
+.service-card{
+    background:var(--dark-grey);
+    margin-top:12px;
+    border-radius:16px;
+    padding:20px 24px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border:1px solid var(--border);
+}
+
+.service-name{
+    font-weight:500;
+}
+
+.price{
+    font-weight:700;
+    color:white;
+}
+
+/* ---------------- WHY US ---------------- */
+
+.features{
+    padding:100px 0;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.feature{
+    background:var(--charcoal);
+    padding:35px;
+    border-radius:22px;
+    text-align:center;
+    border:1px solid var(--border);
+}
+
+.feature i{
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.feature h3{
+    margin-bottom:10px;
+}
+
+/* ---------------- SOCIAL ---------------- */
+
+.social{
+    padding:60px 0;
+}
+
+.social-icons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.social-icons a{
+    width:70px;
+    height:70px;
+    background:var(--charcoal);
+    border:1px solid var(--border);
+    border-radius:50%;
+    color:white;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.7rem;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    transform:translateY(-5px);
+    background:white;
+    color:black;
+}
+
+/* ---------------- CTA ---------------- */
+
+.cta{
+    padding:70px 20px;
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+}
+
+.cta h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.cta p{
+    color:#bcbcbc;
+    margin-bottom:25px;
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer{
+    padding:30px;
+    text-align:center;
+    color:#888;
+    border-top:1px solid var(--border);
+}
+
+/* ---------------- FLOATING CALL ---------------- */
+
+.call-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:white;
+    color:black;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:1.5rem;
+    box-shadow:0 15px 40px rgba(0,0,0,.5);
+    z-index:999;
+}
+
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@media(max-width:768px){
+
+.gallery{
+    grid-template-columns:1fr;
+}
+
+
+.service-card{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+}
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.cta h2{
+    font-size:2rem;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+<div class="container">
+
+<!-- Replace with your logo -->
+<img src="logo.png" class="logo" alt="Cadette Plumbing">
+
+<h1>WE SPECIALIZE IN<br>PLUMBING MAINTENANCE</h1>
+
+<p>
+Professional plumbing maintenance, drain cleaning, installations,
+repairs and servicing throughout Trinidad & Tobago.
+</p>
+
+<a href="tel:+18684795116" class="phone">
+(868) 479-5116
+</a>
+
+</div>
+
+</section>
+
+<section class="gallery-section reveal">
+
+<div class="container">
+
+<h2 class="section-title">Recent Work</h2>
+
+<div class="gallery">
+
+<!-- Replace with your images -->
+<img src="1.jpg" alt="">
+<img src="2.jpg" alt="">
+<img src="3.jpg" alt="">
+
+</div>
+
+</div>
+
+</section>
+
+<section class="services reveal">
+
+<div class="container">
+
+<h2 class="section-title">Services & Pricing</h2>
+
+<!-- Drain Cleaning -->
+
+<div class="category">
+
+<button class="category-header">
+Drain Cleaning
+<i class="fas fa-chevron-down"></i>
+</button>
+
+<div class="category-content">
+
+<div class="service-card">
+<span class="service-name">Shower & Sink Drain Cleaning</span>
+<span class="price">$800</span>
+</div>
+
+<div class="service-card">
+<span class="service-name">Toilet Drain Cleaning</span>
+<span class="price">$1,200</span>
+</div>
+
+</div>
+
+</div>
+
+<!-- Camera -->
+
+<div class="category">
+
+<button class="category-header">
+Drain Camera Inspection
+<i class="fas fa-chevron-down"></i>
+</button>
+
+<div class="category-content">
+
+<div class="service-card">
+<span class="service-name">Toilet Drain Camera Inspection</span>
+<span class="price">$1,300</span>
+</div>
+
+<div class="service-card">
+<span class="service-name">Shower & Sink Camera Inspection</span>
+<span class="price">$900</span>
+</div>
+
+</div>
+
+</div>
+
+<!-- Installation -->
+
+<div class="category">
+
+<button class="category-header">
+Fixture Installation
+<i class="fas fa-chevron-down"></i>
+</button>
+
+<div class="category-content">
+
+<div class="service-card">
+<span class="service-name">Faucet Installation</span>
+<span class="price">$300</span>
+</div>
+
+<div class="service-card">
+<span class="service-name">Sink / Vanity Installation</span>
+<span class="price">$700</span>
+</div>
+
+<div class="service-card">
+<span class="service-name">Toilet Installation</span>
+<span class="price">$700</span>
+</div>
+
+<div class="service-card">
+<span class="service-name">Shower Mixer Installation</span>
+<span class="price">$1,000</span>
+</div>
+
+<div class="service-card">
+<span class="service-name">Water Pump Installation</span>
+<span class="price">$800</span>
+</div>
+
+<div class="service-card">
+<span class="service-name">Water Heater Installation</span>
+<span class="price">$1,000</span>
+</div>
+
+<div class="service-card">
+<span class="service-name">Water Filter Installation</span>
+<span class="price">$300</span>
+</div>
+
+<div class="service-card">
+<span class="service-name">Water Tank Installation</span>
+<span class="price">$500</span>
+</div>
+
+<div class="service-card">
+<span class="service-name">Complete Bathroom Kitchen & Laundry From Scratch</span>
+<span class="price">$6,500</span>
+</div>
+
+</div>
+
+</div>
+
+<!-- Servicing -->
+
+<div class="category">
+
+<button class="category-header">
+Servicing & Repairs
+<i class="fas fa-chevron-down"></i>
+</button>
+
+<div class="category-content">
+
+<div class="service-card">
+<span class="service-name">Service Toilet</span>
+<span class="price">$400</span>
+</div>
+
+<div class="service-card">
+<span class="service-name">Leaking Under Sink</span>
+<span class="price">$300</span>
+</div>
+
+<div class="service-card">
+<span class="service-name">Fix Toilet Waste Pipe Leak</span>
+<span class="price">$500</span>
+</div>
+
+<div class="service-card">
+<span class="service-name">Pump Servicing</span>
+<span class="price">$700</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="social reveal">
+
+<div class="container">
+
+<h2 class="section-title">Follow Us</h2>
+
+<div class="social-icons">
+
+<a href="https://www.facebook.com/share/1LwrKn6Tpq/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/cadette.plumbing"><i class="fab fa-instagram"></i></a>
+<a href="https://www.tiktok.com/@zachery.cadette?_r=1&_t=ZS-97LXza7CziS"><i class="fab fa-tiktok"></i></a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta reveal">
+
+<h2>Need A Plumber?</h2>
+
+<p>Call now for fast and professional plumbing service.</p>
+
+<a href="tel:+18684795116" class="phone">
+(868) 479-5116
+</a>
+
+</section>
+
+<footer>
+© <span id="year"></span> Cadette Plumbing • Trinidad & Tobago
+</footer>
+
+<a href="tel:+18684795116" class="call-btn">
+<i class="fas fa-phone"></i>
+</a>
+
+<script>
+
+// Service accordion
+
+document.querySelectorAll('.category-header').forEach(button=>{
+
+button.addEventListener('click',()=>{
+
+const category=button.parentElement;
+const content=button.nextElementSibling;
+
+category.classList.toggle('active');
+
+if(content.style.maxHeight){
+content.style.maxHeight=null;
+}else{
+content.style.maxHeight=content.scrollHeight + "px";
+}
+
+});
+
+});
+
+// Scroll reveal
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+
+});
+
+},{threshold:.15});
+
+document.querySelectorAll('.reveal').forEach(el=>{
+observer.observe(el);
+});
+
+// Year
+
+document.getElementById('year').textContent =
+new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
